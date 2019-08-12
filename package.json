@@ -1,0 +1,56 @@
+{
+  "name": "fuck-youtube-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src",
+  "scripts": {
+    "dev": "nodemon -w src --exec \"babel-node src\"",
+    "start": "babel-node src",
+    "lint": "standard",
+    "build": "babel src -s -D -d dist",
+    "start:prod": "node dist",
+    "test": "jest --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlessandroFC15/fuck-youtube-server.git"
+  },
+  "keywords": [],
+  "author": "Alessandro Costa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlessandroFC15/fuck-youtube-server/issues"
+  },
+  "homepage": "https://github.com/AlessandroFC15/fuck-youtube-server#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "jest": "^24.8.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "nodemon": "^1.18.9",
+    "standard": "^12.0.1"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "env": {
+      "jest": true
+    }
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}
