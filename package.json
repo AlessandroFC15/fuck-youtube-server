@@ -9,7 +9,7 @@
     "lint": "standard",
     "build": "babel src -s -D -d dist",
     "start:prod": "node dist",
-    "test": "jest --runInBand"
+    "test": "jest --runInBand --passWithNoTests"
   },
   "repository": {
     "type": "git",
