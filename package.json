@@ -9,7 +9,8 @@
     "lint": "standard",
     "build": "babel src -s -D -d dist",
     "start:prod": "node dist",
-    "test": "jest --runInBand --passWithNoTests"
+    "test": "jest --runInBand --passWithNoTests",
+    "test:cover": "jest --runInBand --passWithNoTests --collectCoverage --coverageDirectory ./coverage"
   },
   "repository": {
     "type": "git",
