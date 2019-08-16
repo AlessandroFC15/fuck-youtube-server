@@ -1,6 +1,9 @@
 # Dependency directories
 node_modules/
 
+# Distribution code
+dist/
+
 # Coverage directory used by tools like istanbul
 coverage
 
