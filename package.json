@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/AlessandroFC15/fuck-youtube-server#readme",
   "dependencies": {
+    "axios": "^0.19.0",
     "express": "^4.16.4",
     "jest": "^24.8.0"
   },
