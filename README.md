@@ -32,9 +32,26 @@ $ npm run dev
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-1. Clone repo and create a new branch: `$ git checkout https://github.com/AlessandroFC15/fuck-youtube-server -b name_for_new_branch`.
+1. Clone repo and create a new branch: 
+```bash
+git checkout https://github.com/AlessandroFC15/fuck-youtube-server -b name_for_new_branch
+```
 2. Make the necessary changes and test
 3. Submit a Pull Request with a comprehensive description of changes
+
+**Running the tests**
+---
+`npm run test`
+
+- Code style used is [StandardJS](https://standardjs.com/) - JavaScript style guide, linter, and formatter
+
+`npm run lint`
+
+**Deployment**
+---
+* `master` -> automatically deploys to [Heroku](https://fuck-youtube-server.herokuapp.com)
+
+Any other branch is only built for CI.
 
 **License**
 ---
