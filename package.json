@@ -66,6 +66,8 @@
     "coveragePathIgnorePatterns": [
       "/node_modules/"
     ],
-    "modulePathIgnorePatterns": ["<rootDir>/dist/"]
+    "modulePathIgnorePatterns": [
+      "<rootDir>/dist/"
+    ]
   }
 }
