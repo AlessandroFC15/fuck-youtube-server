@@ -1,0 +1,6 @@
+coverage:
+  range: 40..80
+
+  status:
+    project: false
+    patch: false
