@@ -34,6 +34,6 @@ const findVideoSrc = embedResponse => {
     : null
 }
 
-export {
+export default {
   getVideoSrc
 }

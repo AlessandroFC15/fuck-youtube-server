@@ -1,6 +1,8 @@
-import { getVideoSrc } from './index'
+import service from './index'
 import { getMockResponse } from '../../mocks'
 import { getPageHTML } from '../../utils'
+
+const { getVideoSrc } = service
 
 jest.mock('../../utils')
 

@@ -70,6 +70,6 @@ const VideoQuality = Object.freeze({
   SD: 'standard_definition'
 })
 
-export {
+export default {
   getVideoSrc
 }

@@ -1,6 +1,8 @@
 import { getMainPageResponse, getResponseFromEmbedEndpoint } from './requester'
-import { getVideoSrc } from './index'
+import service from './index'
 import { getMockResponse } from '../../mocks'
+
+const { getVideoSrc } = service
 
 jest.mock('./requester')
 
