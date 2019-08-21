@@ -21,7 +21,7 @@ app.get('/getVideoSrc', queryValidation, async (req, res) => {
   const services = [tubeUnblock, genYoutube]
 
   for (const service of services) {
-    const videoSrc = await service.getVideoSrc(`https://www.youtube.com/watch?v=${req.query.youtubeVideoId}`)
+    const videoSrc = await service.getVideoSrc(req.query.youtubeVideoId)
 
     if (videoSrc) {
       return res.json({
