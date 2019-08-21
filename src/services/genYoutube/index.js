@@ -2,8 +2,8 @@ import cheerio from 'cheerio'
 
 import { getPageHTML } from '../../utils'
 
-const getVideoSrc = async youtubeUrl => {
-  const genyoutubeUrl = `https://video.genyt.net/${getIdFromYoutubeUrl(youtubeUrl)}`
+const getVideoSrc = async youtubeVideoId => {
+  const genyoutubeUrl = `https://video.genyt.net/${youtubeVideoId}`
 
   const pageHTML = await getPageHTML({
     url: genyoutubeUrl,
@@ -52,8 +52,6 @@ const findVideoLink = (pageHTML, videoQuality) => {
     : null
 }
 
-const getIdFromYoutubeUrl = url => new URL(url).searchParams.get('v')
-
 // The links provided by the GenYoutube platform usually come with a parameter called title that makes the video
 // get downloaded. This method aims to remove that parameter and return a link without that parameter
 const formatLink = genYoutubeLink => {
@@ -70,6 +68,6 @@ const VideoQuality = Object.freeze({
   SD: 'standard_definition'
 })
 
-export {
+export default {
   getVideoSrc
 }

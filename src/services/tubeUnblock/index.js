@@ -1,14 +1,9 @@
 import cheerio from 'cheerio'
 
-import { isYoutubeVideoLink } from '../../utils'
 import { baseUrl, getMainPageResponse, getResponseFromEmbedEndpoint } from './requester'
 
-const getVideoSrc = async youtubeVideoUrl => {
-  if (!isYoutubeVideoLink(youtubeVideoUrl)) {
-    return null
-  }
-
-  const response = await getMainPageResponse(youtubeVideoUrl)
+const getVideoSrc = async youtubeVideoId => {
+  const response = await getMainPageResponse(youtubeVideoId)
   const iframeLink = getIframeLink(response.data)
 
   if (!iframeLink) {
@@ -34,6 +29,6 @@ const findVideoSrc = embedResponse => {
     : null
 }
 
-export {
+export default {
   getVideoSrc
 }
