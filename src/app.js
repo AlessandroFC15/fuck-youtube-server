@@ -6,10 +6,6 @@ import genYoutube from './services/genYoutube'
 
 const app = express()
 
-app.get('/', function (req, res) {
-  res.send(JSON.stringify({ Hello: 'World' }))
-})
-
 const queryValidation = [ check('youtubeVideoId').not().isEmpty() ]
 
 app.get('/getVideoSrc', queryValidation, async (req, res) => {
