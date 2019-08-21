@@ -5,7 +5,7 @@ export const isYoutubeVideoLink = (url) =>
 
 export const getPageHTML = async ({ url, selectorToWaitFor }) => {
   try {
-    const browser = await puppeteer.launch()
+    const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] })
 
     const page = await browser.newPage()
 
