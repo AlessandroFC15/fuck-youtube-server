@@ -4,14 +4,24 @@ import { baseUrl, getMainPageResponse, getResponseFromEmbedEndpoint } from './re
 
 const getVideoSrc = async youtubeVideoId => {
   const response = await getMainPageResponse(youtubeVideoId)
-  const iframeLink = getIframeLink(response.data)
+
+  if (!response) {
+    return null
+  }
+
+  const iframeLink = getIframeLink(response)
 
   if (!iframeLink) {
     return null
   }
 
   const embedResponse = await getResponseFromEmbedEndpoint(iframeLink)
-  const videoSrc = findVideoSrc(embedResponse.data)
+
+  if (!embedResponse) {
+    return null
+  }
+
+  const videoSrc = findVideoSrc(embedResponse)
 
   return videoSrc ? {
     resolution: 360,
