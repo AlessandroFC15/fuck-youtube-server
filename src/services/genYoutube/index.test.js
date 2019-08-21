@@ -33,5 +33,11 @@ describe('extract mirror from GenYoutube page', () => {
 
       return expect(getVideoSrc('id-of-deleted-video')).resolves.toBe(null)
     })
+
+    it('should return null when request fails', () => {
+      getPageHTML.mockResolvedValue(null)
+
+      return expect(getVideoSrc('id-of-deleted-video')).resolves.toBe(null)
+    })
   })
 })

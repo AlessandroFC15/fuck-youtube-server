@@ -10,6 +10,10 @@ const getVideoSrc = async youtubeVideoId => {
     selectorToWaitFor: 'a.downbuttonstyle'
   })
 
+  if (!pageHTML) {
+    return null
+  }
+
   const videoQualitiesToSearchFor = [
     { type: VideoQuality.HD, resolution: 720 },
     { type: VideoQuality.SD, resolution: 360 }
