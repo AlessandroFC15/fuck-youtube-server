@@ -1,13 +1,11 @@
-import { readFileSync } from 'fs'
-import { join } from 'path'
-
 import { getMainPageResponse, getResponseFromEmbedEndpoint } from './requester'
 import { getVideoSrc } from './index'
+import { getMockResponse } from '../../mocks'
 
 jest.mock('./requester')
 
-const validMainPageResponse = readFileSync(join(__dirname, '../../mocks/tubeUnblock/mainPageResponse.html'), 'utf8')
-const validEmbedResponse = readFileSync(join(__dirname, '../../mocks/tubeUnblock/embedResponse.html'), 'utf8')
+const validMainPageResponse = getMockResponse('/tubeUnblock/mainPageResponse.html')
+const validEmbedResponse = getMockResponse('/tubeUnblock/embedResponse.html')
 
 describe('extract mirrors from TubeUnblock page', () => {
   describe('successful scenarios', () => {
