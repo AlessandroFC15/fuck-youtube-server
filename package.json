@@ -28,7 +28,8 @@
     "@babel/runtime": "^7.5.5",
     "cheerio": "^1.0.0-rc.3",
     "express": "^4.16.4",
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "puppeteer": "^1.19.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
