@@ -32,4 +32,7 @@ app.get('/getVideoSrc', queryValidation, async (req, res) => {
   })
 })
 
+app.get('/', (req, res) => res.send('This endpoint is used to prevent the Heroku app from sleeping. ' +
+  'The main endpoint can be found at /getVideoSrc'))
+
 export default app
