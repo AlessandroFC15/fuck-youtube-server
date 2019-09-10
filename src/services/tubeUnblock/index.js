@@ -40,5 +40,6 @@ const findVideoSrc = embedResponse => {
 }
 
 export default {
-  getVideoSrc
+  getVideoSrc,
+  name: 'TubeUnblock'
 }
