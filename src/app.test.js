@@ -35,7 +35,7 @@ describe('Test the find source method', () => {
             url: 'tubeunblock-link',
             resolution: 360
           })
-          expect(saveAttempt).toHaveBeenCalledWith({ videoId, successful: true })
+          expect(saveAttempt).toHaveBeenCalledWith({ videoId, successful: true, provider: tubeUnblock.name })
         })
     })
 
@@ -54,7 +54,7 @@ describe('Test the find source method', () => {
             url: 'genyoutube-link',
             resolution: 360
           })
-          expect(saveAttempt).toHaveBeenCalledWith({ videoId, successful: true })
+          expect(saveAttempt).toHaveBeenCalledWith({ videoId, successful: true, provider: genYoutube.name })
         })
     })
 
@@ -76,7 +76,7 @@ describe('Test the find source method', () => {
             url: 'tubeunblock-link',
             resolution: 720
           })
-          expect(saveAttempt).toHaveBeenCalledWith({ videoId, successful: true })
+          expect(saveAttempt).toHaveBeenCalledWith({ videoId, successful: true, provider: tubeUnblock.name })
         })
     })
   })

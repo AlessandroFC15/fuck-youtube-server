@@ -73,5 +73,6 @@ const VideoQuality = Object.freeze({
 })
 
 export default {
-  getVideoSrc
+  getVideoSrc,
+  name: 'GenYouTube'
 }
