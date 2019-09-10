@@ -3,6 +3,7 @@ import { check, validationResult } from 'express-validator'
 
 import tubeUnblock from './services/tubeUnblock'
 import genYoutube from './services/genYoutube'
+import { saveAttempt } from './services/storage'
 
 const app = express()
 
@@ -14,12 +15,15 @@ app.get('/getVideoSrc', queryValidation, async (req, res) => {
     return res.status(422).json({ errors: errors.array() })
   }
 
+  const videoId = req.query.youtubeVideoId
+
   const services = [tubeUnblock, genYoutube]
 
   for (const service of services) {
-    const videoSrc = await service.getVideoSrc(req.query.youtubeVideoId)
+    const videoSrc = await service.getVideoSrc(videoId)
 
     if (videoSrc) {
+      saveAttempt({ videoId, successful: true })
       return res.json({
         url: videoSrc.link,
         resolution: videoSrc.resolution
@@ -27,6 +31,7 @@ app.get('/getVideoSrc', queryValidation, async (req, res) => {
     }
   }
 
+  saveAttempt({ videoId, successful: false })
   res.json({
     url: null
   })
