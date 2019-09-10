@@ -4,7 +4,6 @@
 
 - This project offers an API that is used by the browser extension called [Fuck Youtube](https://github.com/AlessandroFC15/Fuck-Youtube). The main goal of this project is to provide an alternative video source for YouTube videos that might be blocked on the user's country.
 
-
 <p align="center">
   <img width="600" src="https://addons.cdn.mozilla.net/user-media/previews/full/193/193308.png">
 </p>
