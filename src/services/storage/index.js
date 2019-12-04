@@ -1,11 +1,12 @@
 import db from './firebase'
 
-const saveAttempt = ({ videoId, successful, provider }) =>
+const saveAttempt = ({ videoId, successful, provider, origin = '' }) =>
   db && db.collection('attempts').add({
     dateCreated: new Date(),
     videoId,
     successful,
-    provider
+    provider,
+    origin
   })
 
 export {

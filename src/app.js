@@ -23,7 +23,7 @@ app.get('/getVideoSrc', queryValidation, async (req, res) => {
     const videoSrc = await service.getVideoSrc(videoId)
 
     if (videoSrc) {
-      saveAttempt({ videoId, successful: true, provider: service.name })
+      saveAttempt({ videoId, successful: true, provider: service.name, origin: req.headers.source })
       return res.json({
         url: videoSrc.link,
         resolution: videoSrc.resolution
@@ -31,7 +31,7 @@ app.get('/getVideoSrc', queryValidation, async (req, res) => {
     }
   }
 
-  saveAttempt({ videoId, successful: false })
+  saveAttempt({ videoId, successful: false, origin: req.headers.source })
   res.json({
     url: null
   })
