@@ -29,7 +29,7 @@
     "cheerio": "^1.0.0-rc.3",
     "express": "^4.16.4",
     "express-validator": "^6.1.1",
-    "firebase-admin": "^8.5.0",
+    "firebase-admin": "^11.4.1",
     "jest": "^24.8.0",
     "puppeteer": "^1.19.0"
   },
